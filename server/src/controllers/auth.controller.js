@@ -40,7 +40,7 @@ export const signUpCtrl = async (req, res) => {
 
 export const signOutCtrl = (req, res) => {
   try {
-    req.session.destroy (err)
+    req.cookie.destroy (err)
     res.status(200).json({ message: "Sign out success" });
   } catch (error) {
     res.status(500).json({ message: error.message });
