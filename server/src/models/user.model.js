@@ -1,5 +1,6 @@
 import { hash, genSalt, compare } from "bcrypt";
 import crypto from "crypto";
+import { conn } from "../database/db.js";
 
 const usersCollection = [];
 
