@@ -1,6 +1,6 @@
 import { createPool } from 'mysql2/promise';
 
-const createMyPool = () => {
+const createConnection = () => {
     try {
         const pool = createPool({
             database: 'coffees',
@@ -14,6 +14,6 @@ const createMyPool = () => {
     }
 }
 
-const conn = createMyPool;
+const conn = createConnection();
 
 export { conn }
